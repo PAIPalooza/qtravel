@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Set up Supabase schema for users, trips, and itinerary items",
+    "body": "Create tables: `users`, `trips`, `itinerary_items`, `user_preferences`. Use SQL from PRD.",
+    "labels": ["backend", "database", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Seed demo user and sample trip data",
+    "body": "Insert one demo user and trip into Supabase for testing LLM and UI outputs.",
+    "labels": ["backend", "seed", "P1"],
+    "assignees": []
+  },
+  {
+    "title": "Build Trip Input Form UI",
+    "body": "Create a form for users to enter destination, travel dates, budget, and style. Use minimal styling (Tailwind or equivalent).",
+    "labels": ["frontend", "UI", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Create Preferences Form UI",
+    "body": "Allow users to optionally select travel preferences (e.g. food, art, nature) with weighted sliders or tags.",
+    "labels": ["frontend", "UI", "P1"],
+    "assignees": []
+  },
+  {
+    "title": "Implement POST /generate-itinerary API endpoint",
+    "body": "Accept trip data from frontend, format prompt, call LLM (OpenAI or mock), return structured JSON itinerary.",
+    "labels": ["backend", "api", "ai", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Craft initial itinerary generation prompt for OpenAI",
+    "body": "Prompt should include destination, duration, budget, and preferences. Return day-by-day plan with metadata.",
+    "labels": ["prompt-engineering", "ai", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Integrate OpenAI or mock LLM into itinerary generator",
+    "body": "Use `openai` npm or Python SDK, or mock function returning sample structured itinerary JSON for development.",
+    "labels": ["backend", "ai", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Render itinerary on frontend by day",
+    "body": "Take API response and render in UI grouped by day with activity cards. Show title, time, location, and notes.",
+    "labels": ["frontend", "UI", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Add loading, success, and error states to itinerary generation flow",
+    "body": "Show loading spinner while itinerary is generating. Display errors and retry options if generation fails.",
+    "labels": ["frontend", "UX", "P1"],
+    "assignees": []
+  },
+  {
+    "title": "Add preview / code mode toggle for itinerary generation results",
+    "body": "Allow user to switch between a clean preview UI and raw JSON (for debugging or developer inspection).",
+    "labels": ["frontend", "UI", "P2"],
+    "assignees": []
+  },
+  {
+    "title": "Create reusable ItineraryItem component",
+    "body": "Encapsulate title, time, location, description. Use props for reusability across views (map, list, preview).",
+    "labels": ["frontend", "component", "P2"],
+    "assignees": []
+  },
+  {
+    "title": "Enable live trip editing (drag-and-drop or reorder days)",
+    "body": "Optional stretch goal: use a drag-and-drop library or up/down controls to rearrange itinerary days.",
+    "labels": ["frontend", "UX", "P3"],
+    "assignees": []
+  },
+  {
+    "title": "Test trip generation flow end-to-end",
+    "body": "Test: user inputs trip → submits → receives valid itinerary JSON → UI renders correctly.",
+    "labels": ["testing", "integration", "P0"],
+    "assignees": []
+  },
+  {
+    "title": "Deploy backend API to Vercel or Supabase Edge Function",
+    "body": "Package FastAPI or Node function and deploy to edge for live demo access.",
+    "labels": ["devops", "deployment", "P1"],
+    "assignees": []
+  }
+]
