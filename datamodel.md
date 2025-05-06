@@ -1,5 +1,3 @@
----
-
 # 🗃️ Supabase SQL Data Model for AI Travel Planner
 
 ```sql
